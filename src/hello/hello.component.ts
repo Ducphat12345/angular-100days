@@ -2,6 +2,12 @@ import { Component } from "@angular/core";
 
 @Component({
     selector: 'app-hello',
-    templateUrl: './hello.component.html'
+    templateUrl: './hello.component.html',
+    styleUrls: ['./hello.component.css']
 })
-export class HelloComponent{}
+export class HelloComponent{
+    user = {
+        name: "Angular",
+        age: 20,
+    };
+}
