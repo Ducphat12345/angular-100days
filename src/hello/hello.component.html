@@ -12,3 +12,14 @@ Age: {{user.age}}
 <br>
 <input type="text" [ngModel]="user.age" (ngModelChange)="user.age = $event" />
 <br>
+<ul>
+    <li *ngFor="let u of users; index as idx; count as total; first as isFirst; last as isLast; even as isEven; odd as isOdd">
+        <p>{{u.id}} - {{u.name}} - {{u.phone}}</p>
+        <p>at index {{idx}} out of {{total}}</p>
+        <p *ngIf="isEven">I'm even number</p>
+        <p *ngIf="isOdd">I'm odd number</p>
+        <p *ngIf="isFirst">I'm first</p>
+        <p *ngIf="isLast">I'm last</p>
+    </li>
+</ul>
+<button *ngFor="let tag of tags; last as isLast" [class.right-margin]="!isLast">{{tag}}</button>
