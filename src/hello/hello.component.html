@@ -1,7 +1,9 @@
-<a href="./welcome.component.html">Welcome!</a>
-<br>
+<h1 *ngIf="user.age >= 18">Hello {{user.name}}!</h1>
+<p *ngIf="user.age < 18">You are too young to see this content!</p>
+<button (click)="user.age = user.age - 1">-</button>
+Age: {{user.age}}
+<button (click)="user.age = user.age + 1">+</button>
 <p>Name: {{user.name}}, Age: {{user.age}}</p>
-<br>
 <input type="text" [value]="user.name">
 <br>
 <button type="button" (click)="handler($event)">Click</button>
@@ -9,3 +11,4 @@
 <input type="text" [ngModel]="user.name" (ngModelChange)="user.name = $event" />
 <br>
 <input type="text" [ngModel]="user.age" (ngModelChange)="user.age = $event" />
+<br>
