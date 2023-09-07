@@ -1,3 +1,11 @@
-<span>AngularCLI!</span>
-<span>{{user.name}}</span>
-<span>{{user.age}}</span>
+<a href="./welcome.component.html">Welcome!</a>
+<br>
+<p>Name: {{user.name}}, Age: {{user.age}}</p>
+<br>
+<input type="text" [value]="user.name">
+<br>
+<button type="button" (click)="handler($event)">Click</button>
+<br>
+<input type="text" [ngModel]="user.name" (ngModelChange)="user.name = $event" />
+<br>
+<input type="text" [ngModel]="user.age" (ngModelChange)="user.age = $event" />

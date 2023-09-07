@@ -7,7 +7,11 @@ import { Component } from "@angular/core";
 })
 export class HelloComponent{
     user = {
-        name: "Angular",
-        age: 20,
+        'name': 'Phát',
+        'age': 24
     };
+
+    handler(event: any){ 
+        console.log('clicked', event);
+    }
 }
