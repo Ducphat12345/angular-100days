@@ -247,4 +247,7 @@ export class HelloComponent{
     handler(event: any){ 
         console.log('clicked', event);
     }
+    isDanger = false;
+    isWarning = false;
+    classes = 'box red-border yellow-background'
 }

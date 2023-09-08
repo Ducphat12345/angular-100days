@@ -1,3 +1,7 @@
+<!--Data binding-->
+<!--Event binding-->
+<!--Two way binding-->
+<!--ngIf, ngFor-->
 <h1 *ngIf="user.age >= 18">Hello {{user.name}}!</h1>
 <p *ngIf="user.age < 18">You are too young to see this content!</p>
 <button (click)="user.age = user.age - 1">-</button>
@@ -23,3 +27,20 @@ Age: {{user.age}}
     </li>
 </ul>
 <button *ngFor="let tag of tags; last as isLast" [class.right-margin]="!isLast">{{tag}}</button>
+<br>
+<!--Class & style binding-->
+<!--[class.name-class]-->
+<!--[class="array"]-->
+<!--[class]="object" {[name-class: string]: boolean}-->
+<!--[class]="variable"-->
+<!--[style.nameStyle]-->
+<!--[style.name-style]-->
+<!--[style.tenStyle.unit]-->
+<!--[style]="object"-->
+<!--[style.css-variable]-->
+<button (click)="isDanger = !isDanger">Toggle Danger</button>
+<br>
+<button (click)="isWarning = !isWarning">Toggle Warning</button>
+<div class="box" [class]="{'red-border': isDanger, 'yellow-background': isWarning}"></div>
+<p [style.--text-color]="isDanger ? 'red' : 'blue'" [style]="{color: 'var(--text-color)', background: 'yellow', fontSize: '20px'}">Hello!</p>
+<!--Input binding-->
